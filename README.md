@@ -36,7 +36,7 @@ Above command runs mongodb container with port 27017 mapped to host and connecti
 
 1. To avoid this loss of data, you should mount a volume that will persist even after the container is removed. If you are using default configuration mount the volume to /var/lib/mongo
 
-```$ docker run --restart=always --name=mongodb -p 9092:9092 -v /data:/var/lib/mongo -td phenompeople/kibana```
+```$ docker run --restart=always --name=mongodb -p 9092:9092 -v /data:/var/lib/mongo -td phenompeople/mongodb```
  
  MongoDB’s official guide on deploying to production recommends using the XFS file system on Linux, especially when deploying the WiredTiger storage engine.
  
@@ -52,7 +52,7 @@ Above command runs mongodb container with port 27017 mapped to host and connecti
 
 1. To avoid this loss of data, you should mount a volume that will persist even after the container is removed. If you are using default configuration mount the volume to /var/lib/mongo
 
-```$ docker run --restart=always --name=mongodb -p 9092:9092 -v /data:/var/lib/mongo -td phenompeople/kibana```
+```$ docker run --restart=always --name=mongodb -p 9092:9092 -v /data:/var/lib/mongo -td phenompeople/mongodb```
 
 
 
