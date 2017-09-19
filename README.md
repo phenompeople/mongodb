@@ -32,10 +32,15 @@ Above command runs mongodb container with port 27017 mapped to host and connecti
 
 ```$ docker run --restart=always  --name=mongodb -p 27017:27017 -td phenompeople/mongodb```
 
-**Note:** If you remove the container all your data and configurations will be lost, and the next time you run the image the database will be reinitialized.
+**Note:** 
 
-1. To avoid this loss of data, you should mount a volume that will persist even after the container is removed. If you are using default configuration mount the volume to /var/lib/mongo
+* If you remove the container all your data and configurations will be lost, and the next time you run the image the database will be reinitialized. 
+* MongoDB adds a user and group, mongodb, that runs the process and owns the associated files such as logs in /var/log/mongodb and database files in /var/lib/mongodb
+* You will need to add a user and group, for your new daemon user, as well as chown'ing the files to your new user and group. Linux understand users by IDs not by names, hence create a local user and group mongod
 
+
+1. To avoid this loss of data, you should mount a volume that will persist even after the container is removed. If you are using default configuration file mount the volume to **/var/lib/mongo**
+ 
 ```$ docker run --restart=always --name=mongodb -p 27017:27017 -v /data:/var/lib/mongo -td phenompeople/mongodb```
  
  MongoDB’s official guide on deploying to production recommends using the XFS file system on Linux, especially when deploying the WiredTiger storage engine.
