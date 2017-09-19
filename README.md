@@ -36,7 +36,7 @@ Above command runs mongodb container with port 27017 mapped to host and connecti
 
 * If you remove the container all your data and configurations will be lost, and the next time you run the image the database will be reinitialized. 
 * MongoDB adds a user and group, mongodb, that runs the process and owns the associated files such as logs in /var/log/mongodb and database files in /var/lib/mongodb
-* You will need to add a user and group, for your new daemon user, as well as chown'ing the files to your new user and group. Linux understand users by IDs not by names, hence create a local user and group mongod
+* You will need to add a user and group, for your new daemon user, as well as chown'ing the files to your new user and group. Linux understand users by IDs not by names, hence create a local user and group mongod with uid 401
 
 
 1. To avoid this loss of data, you should mount a volume that will persist even after the container is removed. If you are using default configuration file mount the volume to **/var/lib/mongo**
