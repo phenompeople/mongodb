@@ -11,7 +11,8 @@ MongoDB is a free and open-source cross-platform document-oriented database prog
 
 #### phenompeople/mongodb
 
-* **`latest`				([3.6.4/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/3.6.4/Dockerfile))**
+* **`latest`				([4.0.4/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/4.0.4/Dockerfile))**
+* **`4.0.4`				    ([4.0.4/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/4.0.4/Dockerfile))**
 * **`3.6.4`					([3.6.4/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/3.6.4/Dockerfile))**
 * **`3.6.2`					([3.6.2/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/3.6.2/Dockerfile))**
 * **`3.4.9`					([3.4.9/Dockerfile](https://bitbucket.org/phenompeople/mongodb/src/master/3.4.9/Dockerfile))**
